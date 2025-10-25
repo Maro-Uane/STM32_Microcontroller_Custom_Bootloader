@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp.sp
+"user_app_stm32\startup_stm32f446xx.o"
+"user_app_stm32\main.o"
+"user_app_stm32\stm32f4xx_it.o"
+"user_app_stm32\stm32f4xx_hal_msp.o"
+"user_app_stm32\stm32f4xx_hal_uart.o"
+"user_app_stm32\stm32f4xx_hal_rcc.o"
+"user_app_stm32\stm32f4xx_hal_rcc_ex.o"
+"user_app_stm32\stm32f4xx_hal_flash.o"
+"user_app_stm32\stm32f4xx_hal_flash_ex.o"
+"user_app_stm32\stm32f4xx_hal_flash_ramfunc.o"
+"user_app_stm32\stm32f4xx_hal_gpio.o"
+"user_app_stm32\stm32f4xx_hal_dma_ex.o"
+"user_app_stm32\stm32f4xx_hal_dma.o"
+"user_app_stm32\stm32f4xx_hal_pwr.o"
+"user_app_stm32\stm32f4xx_hal_pwr_ex.o"
+"user_app_stm32\stm32f4xx_hal_cortex.o"
+"user_app_stm32\stm32f4xx_hal.o"
+"user_app_stm32\stm32f4xx_hal_exti.o"
+"user_app_stm32\system_stm32f4xx.o"
+--strict --scatter "user_app_stm32\user_app_stm32.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "user_app_stm32.map" -o user_app_stm32\user_app_stm32.axf
